@@ -57,9 +57,6 @@ hist(selected_pos_samples$age)
 
 selected_pos_samples %>% write_csv("selected_pos_samples.csv")
 
-selected_pos_samples %>% rlang::hash()
-rlang::hash_file("selected_pos_samples.csv")
-
 # ------------------------------------------------------------------------------
 
 neg_prop <- c(
@@ -98,6 +95,3 @@ selected_neg_samples %>% tabyl(sex)
 hist(selected_neg_samples$age)
 
 selected_neg_samples %>% write_csv("selected_neg_samples.csv")
-
-selected_neg_samples %>% rlang::hash()
-rlang::hash_file("selected_neg_samples.csv")
