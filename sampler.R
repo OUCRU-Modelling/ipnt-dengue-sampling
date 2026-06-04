@@ -55,7 +55,7 @@ selected_pos_samples %>% tabyl(serotype)
 selected_pos_samples %>% tabyl(sex)
 hist(selected_pos_samples$age)
 
-selected_pos_samples %>% write_csv("selected_pos_samples.csv")
+selected_pos_samples %>% write_excel_csv("selected_pos_samples-ansi2.csv")
 
 # ------------------------------------------------------------------------------
 
@@ -94,4 +94,4 @@ selected_neg_samples %>% tabyl(province)
 selected_neg_samples %>% tabyl(sex)
 hist(selected_neg_samples$age)
 
-selected_neg_samples %>% write_csv("selected_neg_samples.csv")
+selected_neg_samples %>% write_excel_csv("selected_neg_samples-ansi2.csv")
