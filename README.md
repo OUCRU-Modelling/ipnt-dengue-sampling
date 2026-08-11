@@ -14,43 +14,14 @@
 
 ## Sampling criteria used
 
-### Dengue-positive samples
+A fixed random seed `764` was set to (try to) ensures reproducibility across different runs of the sampling operation.
 
-* Samples with a missing year were excluded.
-* Samples were selected separately for each year.
-* If a year contained **50 or fewer samples**, all samples were included.
-* If a year contained more than 50 samples, proportional random sampling was performed within groups defined by:
+**Dengue-positive samples.** Samples with a missing year were excluded. Sampling was performed separately for each year. When a year contained 50 or fewer samples, all were retained; when a year contained more than 50, proportional random sampling was applied within strata defined by month, province, and serotype. Yearly sampling proportions were 49% (2019), 90% (2020), 100% (2021), and 40% (2022).
 
-  * Month
-  * Province
-  * Serotype
-* The sampling proportions were:
-
-  * 2019: 49%
-  * 2020: 90%
-  * 2021: 100%
-  * 2022: 40%
-
-### Dengue-negative samples
-
-* Samples were selected separately for each year.
-* If a year contained **200 or fewer samples**, all samples were included.
-* If a year contained more than 200 samples, proportional random sampling was performed within groups defined by:
-
-  * Day
-  * Month
-  * Province
-* The sampling proportions were:
-
-  * 2018: 0%
-  * 2019: 70%
-  * 2020: 100%
-  * 2021: 100%
-  * 2022: 50%
-
-A fixed random seed (`764`) was used so that the sampling results could be reproduced.
+**Dengue-negative samples.** Sampling was performed separately for each year. When a year contained 200 or fewer samples, all were retained; when a year contained more than 200, proportional random sampling was applied within strata defined by day, month, and province. Yearly sampling proportions were 0% (2018), 70% (2019), 100% (2020), 100% (2021), and 50% (2022).
 
 
 
 ## Environment
 The R environment is managed by [`rv`](https://github.com/A2-ai/rv)
+
